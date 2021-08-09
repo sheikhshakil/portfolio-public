@@ -1,0 +1,185 @@
+<%- include ("../partials/header-start.ejs") %> 
+<%- include ("../partials/nav.ejs") %>
+
+<!-- body -->
+<div class="glass row">
+  <div class="py-4 px-5 intro col-md-5">
+    <div class="text-center mb-4">
+      <img
+        class="img-fluid myPhoto"
+        src="images/myPhoto.jpg"
+        alt="Photo of Shakil"
+      />
+      <h4>Sheikh Shakil Ahmed</h4>
+      <p id="desig">Software Developer</p>
+    </div>
+    <hr />
+    <div class="mt-4">
+      <h5>Find me on:</h5>
+      <div class="socials">
+        <div>
+          <i class="bi bi-github"></i>
+          <span>
+            <a href="https://github.com/sheikhshakil" target="_blank">
+              Github
+            </a>
+          </span>
+        </div>
+        <div>
+          <i class="bi bi-facebook"></i
+          ><span
+            ><a href="https://www.facebook.com/contactshakil/" target="_blank"
+              >Facebook</a
+            ></span
+          >
+        </div>
+        <div>
+          <i class="bi bi-linkedin"></i
+          ><span
+            ><a href="https://www.linkedin.com/in/sheikhshakil" target="_blank"
+              >LinkedIn</a
+            ></span
+          >
+        </div>
+        <div>
+          <i class="bi bi-telegram"></i
+          ><span
+            ><a href="https://t.me/ahmedshakil" target="_blank"
+              >Telegram</a
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="text-center">
+      <a class="btn btn-sm btn-dark" href="<%= cv.url %>"
+        ><i class="ui-icons fas fa-cloud-download-alt"></i> Download my CV</a
+      >
+    </div>
+  </div>
+
+  <div class="px-5 py-4 details col-md-7">
+    <div>
+      <h5>About me</h5>
+      <p>
+        I'm currently reading in International Islamic University Chittagong,
+        Bangladesh. Here I'm pursuing B.Sc Engineering degree in Computer
+        Science and Engineering.
+      </p>
+    </div>
+    <hr />
+    <div>
+      <h5>Specializations</h5>
+      <ul>
+        <li class="mb-2">
+          Full Stack Web Development
+          <ul>
+            <li><code>Responsive web designing</code></li>
+            <li><code>Node.Js, MERN stack, Firebase</code></li>
+            <li><code>Laravel, PHP, MySQL</code></li>
+            <li><code>.NET, C#, MySQL or SQL Server</code></li>
+          </ul>
+        </li>
+        <li class="mb-2">
+          Desktop Apps Development
+          <ul>
+            <li><code>.NET using C#</code></li>
+          </ul>
+        </li>
+        <li>
+          Mobile Apps Development
+          <ul>
+            <li><code>Android apps using Android Studio</code></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include ("../partials/header-end.ejs") %>
+
+<section id="skills" class="skills py-5">
+  <div class="container">
+    <div class="glass-bg sectionTitle">
+      <h4>My Skills & Projects</h4>
+    </div>
+    <div class="mt-3 row">
+      <% skills.forEach(skill => { %> <% if (skill.category == "web") { %>
+      <div class="col-md-4">
+        <div class="card glass-bg">
+          <div class="text-center card-header">
+            <img class="card-icons" src="<%= skill.icon %>" alt="skill icon" />
+            <h5><%= skill.skillName %></h5>
+          </div>
+
+          <div class="card-body p-3">
+            <code><%= skill.skillDes %></code>
+
+            <h6>Skill Level :</h6>
+
+            <div class="progress mt-2" style="height: 20px;">
+              <div
+                class="
+                  progress-bar progress-bar-striped progress-bar-animated
+                  bg-dark
+                "
+                role="progressbar"
+                style="width: <%= skill.skillLevel %>%"
+              ><%= skill.skillLevel %>%</div>
+            </div>
+
+            <div class="text-center mt-3">
+              <a href="/showSkill?skill_id=<%= skill.id %>" class="btn btn-dark btn-sm card-btn"
+                >See my <%= skill.skillName %> projects</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %> <% }) %>
+    </div>
+
+    <!-- 2nd row -->
+    <% if (skills.length > 3) { %>
+    <div class="mt-3 row">
+      <% skills.forEach(skill => { %> <% if (skill.category == "device") {%>
+      <div class="col-md-4">
+        <div class="card glass-bg">
+          <div class="text-center card-header">
+            <img class="card-icons" src="<%= skill.icon %>" alt="skill icon" />
+            <h5><%= skill.skillName %></h5>
+          </div>
+
+          <div class="card-body p-3">
+            <code><%= skill.skillDes %></code>
+
+            <h6>Skill Level :</h6>
+
+            <div class="progress mt-2" style="height: 20px;">
+              <div
+                class="
+                  progress-bar progress-bar-striped progress-bar-animated
+                  bg-dark
+                "
+                role="progressbar"
+                style="width: <%= skill.skillLevel %>%"
+              ><%= skill.skillLevel %>%</div>
+            </div>
+
+            <div class="text-center mt-3">
+              <a href="/showSkill?skill_id=<%= skill.id %>" class="btn btn-dark btn-sm card-btn"
+                >See my <%= skill.skillName %> projects</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %> <% }) %>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include ('../partials/footer.ejs') %>

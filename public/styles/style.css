@@ -1,0 +1,232 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("./bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Poppins:wght@400;500;700&family=Satisfy&display=swap");
+
+:root {
+  --colorPrimary: #91dc4a;
+  --colorPrimaryDark: #397500;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorSecondary: #e6ffd0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100vh;
+  background-image: url("./home-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
+}
+
+.navbar-brand {
+  font-family: "Satisfy", cursive;
+  text-transform: none;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 12px;
+  color: rgb(102, 102, 102) !important;
+}
+.nav-link:hover {
+  color: #7ebe41 !important;
+}
+
+nav {
+  background-color: #e6ffd095;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+/* glass body */
+.glass {
+  max-width: 70vw;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 1rem;
+}
+
+.intro {
+  background: #e6ffd095;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+}
+
+.myPhoto {
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid rgba(111, 151, 0, 0.671);
+}
+
+#desig {
+  font-family: "Anonymous Pro", monospace;
+}
+
+.ui-icons {
+  font-size: 14px;
+}
+
+.socials div {
+  margin-top: 1rem;
+}
+
+.socials div i {
+  margin-right: 0.7rem;
+  color: rgb(61, 122, 0);
+  font-size: 1.2rem;
+}
+
+.socials div span a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Anonymous Pro", monospace;
+}
+.socials div span a:hover {
+  color: darkgreen;
+}
+
+/* about */
+code {
+  color: var(--colorPrimaryDark);
+}
+
+/* skills */
+.skills {
+  background-image: url("./skills-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+.skills .card code {
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card-icons {
+  width: 70px;
+  height: auto;
+}
+
+.card-btn {
+  width: fit-content;
+}
+
+/* show skills page */
+.project-player {
+  width: 80%;
+  height: 250px;
+}
+
+/* common styles */
+
+.glass-bg {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--colorWhite);
+}
+
+/* link tree */
+.tree,
+.skillLevel {
+  padding: 0 1.2rem;
+  padding-top: 0.6rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.skillLevel {
+  padding: 0.6rem 1.2rem;
+  margin-left: auto;
+}
+
+.tree a {
+  color: var(--colorPrimaryDark);
+  text-decoration: none;
+}
+
+.tree a:hover {
+  color: var(--colorBlack);
+}
+
+.sectionTitle {
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+}
+
+.jumper {
+  pointer-events: none;
+}
+
+/* footer */
+footer {
+  background: var(--colorPrimary);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+}
+
+/* privacy policy page */
+.privacy {
+  background: linear-gradient(to right, #dbfff0, #00cb78);
+}
+.privacy a {
+  color: #0d7000;
+  text-decoration: none;
+}
+.privacy a:hover {
+  color: #2b881f;
+}
+
+/* font-family: 'Anonymous Pro', monospace;
+font-family: 'Satisfy', cursive; */
+
+@media (max-width: 992px) {
+  .glass {
+    max-width: 90vw;
+  }
+  .skills .col-md-4 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  nav {
+    margin-bottom: 1rem !important;
+  }
+  header {
+    padding-bottom: 1.2rem !important;
+  }
+
+  .tree,
+  .skillLevel {
+    margin-bottom: 0.7rem;
+    width: 100%;
+  }
+
+  .jumper {
+    pointer-events: visible;
+  }
+
+  #projects {
+    margin-top: 1rem;
+  }
+  .project-player {
+    height: 190px;
+  }
+}

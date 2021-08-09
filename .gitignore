@@ -1,0 +1,4 @@
+node_modules/
+temp.txt
+.env
+configs/SAK.json
